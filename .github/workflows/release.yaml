@@ -22,7 +22,7 @@ jobs:
         run: GOHOSTARCH=386 GOARCH=386 make test
 
       - name: Build
-        run: make all -p linux/amd64 -p windows/amd64 -p linux/arm64 -p darwin/amd64 -p darwin/arm64 -p linux/386
+        run: make all
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
