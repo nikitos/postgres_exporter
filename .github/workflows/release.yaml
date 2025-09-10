@@ -20,7 +20,7 @@ jobs:
 
       - name: Test
         run: GOHOSTARCH=386 GOARCH=386 make test
-          
+
       - name: Build
         run: make
 
