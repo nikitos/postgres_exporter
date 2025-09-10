@@ -18,10 +18,11 @@ jobs:
           go-version: '1.24'
           check-latest: true
 
+      - name: Test
+        run: GOHOSTARCH=386 GOARCH=386 make test
+          
       - name: Build
-        run: |
-          GOHOSTARCH=386 GOARCH=386 make test
-          make
+        run: make
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
