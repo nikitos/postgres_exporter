@@ -8,8 +8,6 @@ on:
       - "v*"
 
 jobs:
-  build-linux:
-    steps:
   build-docker:
     runs-on: ubuntu-latest
     steps:
