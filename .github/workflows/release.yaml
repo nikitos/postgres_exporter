@@ -9,7 +9,8 @@ on:
 
 jobs:
   build-linux:
-    name: Build Linux/BSD All
+    steps:
+  build-docker:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -29,12 +30,6 @@ jobs:
         with:
           name: linux-latest
           path: release
-  build-docker:
-    runs-on: ubuntu-latest
-    steps:
-      -
-        name: Checkout code
-        uses: actions/checkout@v4
 
       - run: |
           echo "GIT_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
