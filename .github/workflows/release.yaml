@@ -24,12 +24,6 @@ jobs:
       - name: Build
         run: make all
 
-      - name: Upload artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: linux-latest
-          path: release
-
       - run: |
           echo "GIT_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
 
