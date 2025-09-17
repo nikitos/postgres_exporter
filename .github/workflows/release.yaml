@@ -63,6 +63,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
+          context: .
           builder: ${{ steps.buildx.outputs.name }}
           tags: ${{ steps.docker_meta.outputs.tags }}
           labels: ${{ steps.docker_meta.outputs.labels }}
@@ -71,4 +72,4 @@ jobs:
           build-args: |
             GIT_VERSION=${{ env.GIT_VERSION }}
             GIT_COMMIT=${{ github.sha }}
-          platforms: linux/amd64
+          platforms: linux/amd64,linux/arm64/v8
