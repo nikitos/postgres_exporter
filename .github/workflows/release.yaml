@@ -71,4 +71,4 @@ jobs:
           build-args: |
             GIT_VERSION=${{ env.GIT_VERSION }}
             GIT_COMMIT=${{ github.sha }}
-          platforms: linux/amd64,linux/arm64/v8
+          platforms: linux/arm64/v8
